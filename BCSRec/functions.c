@@ -32,14 +32,14 @@ int setWidth(int input) {
 	
 }
 // calculate permiter
-int getPerimeter(int length, int width) {
-	int perimeter = length + length + width;
-	return perimeter;
+int getPerimeter(int length, int width) 
+{
+	return 2 *(length + width);
 }
 // calculate area
-int getArea(int length, int width) {
-	int area = length * width;
-	return area;
+int getArea(int length, int width) 
+{
+	return length * width;
 }
 // printing menu and options
 
