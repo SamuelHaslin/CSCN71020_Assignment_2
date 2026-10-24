@@ -1,9 +1,13 @@
 #include "pch.h"
 #include "CppUnitTest.h"
 #include "../BCSRec/functions.h"
-int getPerimeter(int length, int width);
-int getArea(int length, int width);
 
+extern "C" {
+	int setLength(int);
+	int setWidth(int);
+	int getPerimeter(int, int);
+	int getArea(int, int);
+}
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -13,7 +17,7 @@ namespace ThetestingforAssignment2
 	{
 	public:
 		
-		TEST_METHOD(GetPerimeter_ValidDimensions_Returns_CorrectValue)
+		TEST_METHOD(TC_01_GetPerimeter_Returns_CorrectValue)
 		{
 			int length = 5;
 			int width = 3;
@@ -23,6 +27,21 @@ namespace ThetestingforAssignment2
 
 			Assert::AreEqual(expected, actual);
 			
+		}
+		TEST_METHOD(TC_02_GetArea_Returns_CorrectValue)
+		{
+			int length = 10;
+			int width = 7;
+			int expected = 70;
+
+			int actual = getArea(length, width);
+
+			Assert::AreEqual(expected, actual);
+
+		}
+		TEST_METHOD(SetPerimeter_Returns_Correct_Value)
+		{
+			int;
 		}
 	};
 }
