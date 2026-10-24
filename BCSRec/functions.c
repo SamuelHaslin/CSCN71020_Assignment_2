@@ -18,7 +18,7 @@ int setLength(int input) {
 	}
 	
 
-	return -1; //I removed the bracket on the one after the return and also added the - to the one
+	return 1; //I removed the bracket on the one after the return 
 		
 	
 }
@@ -31,7 +31,7 @@ int setLength(int input) {
 			int width = input;
 			return width;
 		}
-		return -1;
+		return 1;
 	}
 
 // calculate permiter
